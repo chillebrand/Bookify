@@ -11,13 +11,23 @@ public enum BookingStatus
 
 public static class BookingStatusHelper
 {
-    public static int[] GetActiveBookingStatuses()
+    public static int[] GetActiveBookingStatusCodes()
     {
-        return new[]
-        {
+        return
+        [
             (int)BookingStatus.Reserved,
             (int)BookingStatus.Confirmed,
             (int)BookingStatus.Completed
-        };
+        ];
+    }
+
+    public static BookingStatus[] GetActiveBookingStatuses()
+    {
+        return
+        [
+            BookingStatus.Reserved,
+            BookingStatus.Confirmed,
+            BookingStatus.Completed
+        ];
     }
 } 

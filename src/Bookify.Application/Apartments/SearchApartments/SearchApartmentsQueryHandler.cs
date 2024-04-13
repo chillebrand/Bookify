@@ -50,7 +50,7 @@ internal sealed class SearchApartmentsQueryHandler
                   )
                   """;
 
-        var activeBookingStatuses = BookingStatusHelper.GetActiveBookingStatuses();
+        var activeBookingStatuses = BookingStatusHelper.GetActiveBookingStatusCodes();
 
         var apartments = await connection
             .QueryAsync<ApartmentResponse, AddressResponse, ApartmentResponse>(

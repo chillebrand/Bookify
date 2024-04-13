@@ -11,5 +11,5 @@ public interface IBookingRepository
         DateRange duration,
         CancellationToken cancellationToken = default);
 
-    Task AddAsync(Booking booking);
+    Task AddAsync(Booking booking, CancellationToken cancellationToken = default);
 }
